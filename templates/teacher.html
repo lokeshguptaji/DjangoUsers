@@ -8,12 +8,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <title>Student SignUp</title>
+    <title>Teacher SignUp</title>
   </head>
   <body>
   <div class="container my-4">
-      <h1>Sign up as a Student</h1>
-      <form action="/student/" method="post">{% csrf_token %}
+      <h1>Sign up as a Teacher</h1>
+      <form action="/teacher/" method="post">{% csrf_token %}
   <div class="form-group">
     <label for="username">Username</label>
     <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username.">
@@ -40,8 +40,8 @@
   </div>
 
         <div class="form-group">
-    <label for="stream">Stream</label>
-    <input type="text" class="form-control" id="stream" name="stream" placeholder="Enter Your Stream">
+    <label for="dept">Department</label>
+    <input type="text" class="form-control" id="dept" name="dept" placeholder="Enter Your Department">
   </div>
 
     <button type="submit" class="btn btn-success my-4">Submit</button>

@@ -16,14 +16,46 @@
   <div class="card-header">
     Django Users
     <div class="text-end">
-    <a href="#" class="btn btn-primary btn-lg" style="text-align:right">Login</a>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Login
+</button>
+
       </div>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Log In Here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action='/login/' method='post'> {% csrf_token %}
+  <div class="form-group">
+    <label for="loginUsername">Username</label>
+    <input type="text" class="form-control" id="loginUsername" name='loginUsername' placeholder="Enter your Username">
+  </div>
+
+    <div class="form-group">
+    <label for="loginPassword">Password</label>
+    <input type="password" class="form-control" id="loginPassword" name='loginPassword' placeholder="Enter your Pasword">
+  </div>
+        <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
   </div>
   <div class="card-body my-5">
     <h5 class="card-title">Sign up for a Free Account</h5>
     <p class="card-text">Select below the type of account you want to create</p>
     <a href="student/" class="btn btn-primary">I'm a Student</a>
-    <a href="#" class="btn btn-success">I'm a Teacher</a>
+    <a href="teacher/" class="btn btn-success">I'm a Teacher</a>
   </div>
   <div class="card-footer text-muted">
     Three Users
